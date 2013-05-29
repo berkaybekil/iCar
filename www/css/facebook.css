@@ -1,0 +1,23 @@
+
+
+/* ===== Primary Styles ========================================================
+Author: Interdi Developers
+========================================================================== */
+
+/* 
+* Tools
+*******************/
+@import url('../css/tools.css');
+
+
+/* 
+* Fonts (import please)
+*******************/
+
+
+/* 
+* Layout
+*******************/
+.container.facebook { width: 810px; height: 810px; overflow: hidden; } 
+
+

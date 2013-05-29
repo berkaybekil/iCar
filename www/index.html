@@ -1,0 +1,168 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <meta name="viewport" content="width=device-width">
+                    <meta name="description" content="">
+                        <meta name="keywords" content="" />
+                        <meta name="robots" content="index,follow" />
+                        <meta name="author" content="">
+                            
+                            <!-- OpenGraph -->
+                            <meta property="og:title" content="" />
+                            <meta property="og:type" content="" />
+                            <meta property="og:url" content="" />
+                            <meta property="og:image" content="" />
+                            <meta property="fb:admins" content="" />
+                            
+                            <!-- Title -->
+                            <title></title>
+                            
+                            <!-- Link -->
+                            <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+                            <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-touch-icon-72x72-precomposed.png" />
+                            <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-touch-icon-114x114-precomposed.png" />
+                            <link rel="shortcut icon" href="assets/favicon.png">
+                                <link rel="stylesheet" href="css/bootstrap.min.css">
+                                    <link rel="stylesheet" href="css/style.css">
+                                        <link type="text/plain" rel="author" href="humans.txt" />
+                                        
+                                        <!--[if IE]>
+                                         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                                         <![endif]-->
+                                        
+                                        </head>
+    <body>
+        <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+        
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+            
+            <!-- Page Container -->
+            <div id="page-container">
+                <!-- Action Page -->
+                <div id="app" class="page">
+                    
+                    <a class="btn bot4 btn-success" style="width: 100px; height: 100px; margin-right:24px; "> Geri </a>
+                    <a class="btn bot btn-success" style="width: 100px; height: 100px;"> İleri </a></br></br>
+                    <a class="btn bot2 btn-success" style="width: 100px; height: 100px; margin-left:40px"> SOL </a></br>
+                    <a class="btn bot3 btn-success" style="width: 100px; height: 100px; margin-left:40px"> SAĞ </a></br></br></br></br>
+                    <a class="btn btn-success" rel="external" href="control.html"> Değiştir </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scripts -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+	   	<script src="js/jquery.mobile-1.3.1.js"></script>
+        <script src="js/cordova.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/validator.js"></script>
+        <script src="js/main.js"></script>
+        
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+             s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+        
+        <script>
+            
+            
+            
+            $( document ).on( "touchstart", ".control", function() {
+                             $(".control").addClass("open");
+                             
+                             });
+            
+            
+            
+            $( document ).on( "touchstart", ".bot", function() {
+                             $.getJSON('http://192.168.0.20/?go', function(data) {
+                                       });
+                             });
+            
+            
+            
+            $( document ).on( "touchend", ".bot", function() {
+                             $.getJSON('http://192.168.0.20/?bfstop', function(data) {
+                                       });
+                             });
+            
+            $( document ).on( "touchstart", ".bot4", function() {
+                             $.getJSON('http://192.168.0.20/?back', function(data) {
+                                       });
+                             });
+            
+            
+            
+            $( document ).on( "touchend", ".bot4", function() {
+                             $.getJSON('http://192.168.0.20/?bfstop', function(data) {
+                                       });
+                             });
+            
+            $( document ).on( "touchstart", ".bot2", function() {
+                             $.getJSON('http://192.168.0.20/?left', function(data) {
+                                       });
+                             });
+            
+            $( document ).on( "touchend", ".bot2", function() {
+                             $.getJSON('http://192.168.0.20/?rlstop', function(data) {
+                                       });
+                             });
+            
+            $( document ).on( "touchstart", ".bot3", function() {
+                             $.getJSON('http://192.168.0.20/?right', function(data) {
+                                       });
+                             });
+            
+            $( document ).on( "touchend", ".bot3", function() {
+                             $.getJSON('http://192.168.0.20/?rlstop', function(data) {
+                                       });
+                             });
+            
+            
+            </script>
+        
+        <script type="text/javascript" charset="utf-8">
+            
+            // Wait for Cordova to load
+            //
+            setInterval(function() {
+                        onDeviceReady();
+                        }, 300);
+            
+            // Cordova is ready
+            //
+            function onDeviceReady() {
+                navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+            }
+            
+            // onSuccess: Get a snapshot of the current acceleration
+            //
+            function onSuccess(acceleration) {
+                
+                
+                
+             
+            }
+            
+            // onError: Failed to get the acceleration
+            //
+            function onError() {
+                alert('onError!');
+            }
+            
+            </script>
+    </body>
+</html>
