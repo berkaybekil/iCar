@@ -61,7 +61,19 @@ MAIN = {
 		$('#skip').click(function () {
 			$('#connect, #skip').fadeOut();		
 		});
+		
+		
+		$('#handbrake').click(function () {
+			alert('El Freni');
+		});
 				
+		$('#signal').click(function () {
+			alert('Sinyal');
+		});
+		
+		$('#corn').click(function () {
+			alert('Korna');
+		});
 				
 	},
 	

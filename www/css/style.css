@@ -46,9 +46,20 @@ Author: Interdi Developers
 html { -webkit-font-smoothing: antialiased;}
 body { font-family: 'ProximaNovaRegular'; }
 
-#page-wrapper { width: 320px; height: 460px; position: relative; overflow: hidden; }
-#page-container { width: 320px; height: 960px; position: absolute; overflow: hidden; }
+#page-wrapper { width: 480px; height: 320px; position: relative; overflow: hidden; }
+#page-container { width: 480px; height: 320px; position: absolute; overflow: hidden; }
 
-.page { width: 320px; height: 460px; position: relative; overflow: hidden; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition-duration: .25s; transition-duration: .25s; }
-#app { background: #ec693b url('../images/bg.png') no-repeat 0 -20px; }
-.bg { background: #ec693b url('../images/bg.png') no-repeat 0 -20px; width: 480px; height: 320px;  }
+.page { height: 320px; width: 480px; position: relative; overflow: hidden; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition-duration: .25s; transition-duration: .25s; }
+#app { background: url('../images/bg.png') no-repeat 0 0; }
+.bg { background: url('../images/bg.png') no-repeat 0 0; width: 480px; height: 320px;  }
+
+#wheel { background: url('../images/wheel.png') no-repeat left top; width: 331px; height: 332px; position: absolute; left: 50%; margin-left: -180px; bottom: -130px; z-index: 10; }
+#signal { background: url('../images/signal.png') no-repeat left top; width: 167px; height: 39px; position: absolute; left: 0; bottom: 65px; z-index: 9; }
+#handbrake { background: url('../images/handbrake.png') no-repeat left top; position: absolute; width: 23px; height: 18px; left: 50%; margin-left: -28px; bottom: 154px; z-index: 11; }
+.arrow { background: url('../images/arrow.png') no-repeat left top; width: 21px; height: 20px; position: absolute; bottom: 97px; }
+.arrow.left { background-position: 0 0; left: 132px; }
+.arrow.left.active { background-position: 0 -19px; }
+.arrow.right { background-position: -26px 0; right: 167px; }
+.arrow.right.active { background-position: 0 -19px; }
+#corn { width: 130px; height: 100px; margin: 110px auto 0; border-radius: 30px; }
+.ui-loader { display: none; }
